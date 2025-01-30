@@ -5,16 +5,27 @@ body, html {
   padding: 20px 5%;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
 .container-icon {
   text-align: center;
   padding: 10px 20px;
-  border: solid 3px #07404c;
+  border: solid 1px #07404c;
   border-radius: 10px;
   margin: 10px 15px;
-  float: left;
   background-color: #eee;
-  max-width: 300px;
-  max-height: 300px;
 }
 
 .container-icon>img {
@@ -22,8 +33,24 @@ body, html {
   max-width: 100px;
 }
 
-.container-icon>button {
+.container-icon > a > button {
   margin-top: 15px;
+  margin-bottom: 25px;
+  width: 180px;
+  padding: 30px 10px;
+  border: solid thin transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #07404c;
+  color: #ecf6f5;
+  border-color: transparent;
+  transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+}
+
+.container-icon > a > button:hover {
+  background-color: #ecf6f5;
+  border-color: #07404c;
+  color: #07404c;
 }
 
 #react-section {
@@ -31,5 +58,10 @@ body, html {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
+}
+
+#icons {
+  width: 100%;
+  margin: 0;
 }
