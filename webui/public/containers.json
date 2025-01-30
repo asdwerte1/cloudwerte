@@ -1,0 +1,10 @@
+{
+    "test": {
+        "imagePath": "file path",
+        "containerUrl": "url"
+    },
+    "libreOffice": {
+        "imagePath": "./images/LibreOffice_Calc-Logo.wine.svg",
+        "containerUrl": "http://libreoffice:8080"
+    }
+}
