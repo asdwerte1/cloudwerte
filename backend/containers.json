@@ -1,0 +1,27 @@
+{
+    "Obsidian": {
+        "description": "Note taking application.",
+        "imagePath": "./images/2023_Obsidian_logo.svg.png",
+        "containerUrl": "http://obsidian:8080"
+    },
+    "Libre Office": {
+        "description": "Open source alternative to Mirosoft Office.",
+        "imagePath": "./images/LibreOffice_Calc-Logo.wine.svg",
+        "containerUrl": "http://libreoffice:8080"
+    },
+    "Retro Arch": {
+        "description": "Retro games emulator.",
+        "imagePath": "./images/RetroArch_logo.png",
+        "containerUrl": "http://retroarch:8080"
+    },
+    "File Server": {
+        "description": "FTP file server.",
+        "imagePath": "./images/Alpine-logo.svg.png",
+        "containerUrl": "http://fileserver:8080"
+    },
+    "Next Cloud": {
+        "description": "Open source cloud storage",
+        "imagePath": "./images/Nextcloud_Logo.svg.png",
+        "containerUrl": "http://nextcloud:8080"
+    }
+}
