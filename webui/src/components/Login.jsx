@@ -12,7 +12,7 @@ const Login = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:5000/api/login", {
+            const response = await axios.post('http://localhost:5000/api/login', {
                 username,
                 password,
             });
@@ -25,7 +25,7 @@ const Login = () => {
     };
 
     return (
-        <div className="login-container">
+        <div className="login-container align-center">
             <h2>Login</h2>
             <form onSubmit={handleLogin}>
                 <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
