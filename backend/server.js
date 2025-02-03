@@ -10,7 +10,11 @@ const SECRET_KEY = process.env.JWT_SECRET || "supersecret";
 const UNAME = process.env.LOGIN;
 const PWORD = process.env.PASSWORD;
 
-app.use(cors());
+app.use(cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "authorization"]
+}));
 app.use(express.json());
 
 app.post("/api/login", (req, res) => {
