@@ -9,9 +9,9 @@
         "imagePath": "./images/LibreOffice_Calc-Logo.wine.svg",
         "containerUrl": "http://localhost:8082"
     },
-    "Retro Arch": {
+    "EmulatorJS": {
         "description": "Retro games emulator.",
-        "imagePath": "./images/RetroArch_logo.png",
+        "imagePath": "./images/emulatorjs-logo.png",
         "containerUrl": "http://localhost:8084"
     },
     "File Server": {
