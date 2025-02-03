@@ -12,7 +12,7 @@
     "EmulatorJS": {
         "description": "Retro games emulator.",
         "imagePath": "./images/emulatorjs-logo.png",
-        "containerUrl": "http://localhost:8084"
+        "containerUrl": "http://localhost:3001"
     },
     "File Server": {
         "description": "FTP file server.",
