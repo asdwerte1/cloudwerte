@@ -9,7 +9,7 @@ function Icon({ title, description, image_route, url }) {
             <p>{description}</p>
             <img src={image_route} alt='Container logo' />
             <br />
-            <a href={`${window.location.origin}${url}`} target='_blank' rel='noreferrer'><button>Launch</button></a>
+            <a href={`${url}`} target='_blank' rel='noreferrer'><button>Launch</button></a>
         </div>
     );
 }
@@ -26,7 +26,7 @@ const Dashboard = () => {
         }
 
         axios
-            .get('http://localhost:5000/api/containers', {
+            .get("http://localhost:5000/api/containers", {
                 headers: { Authorization: `Bearer ${token}` },
             })
             .then((response) => setContainers(response.data))
