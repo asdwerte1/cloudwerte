@@ -1,0 +1,68 @@
+services:
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - ./data/nextcloud/config:/config
+      - ./data/nextcloud/files:/files
+      - ./data/shared:/shared
+    ports:
+      - "8083:443"
+    networks:
+      - cloudwerte-network
+
+  libreoffice:
+    image: lscr.io/linuxserver/libreoffice:latest
+    container_name: libreoffice
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - ./data/libreoffice:/config
+      - ./data/shared:/shared
+    ports:
+      - "8081:3000"
+    networks:
+      - cloudwerte-network
+
+  obsidian:
+    image: lscr.io/linuxserver/obsidian:latest
+    container_name: obsidian
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - ./data/obsidian:/config
+    ports:
+      - "8080:3000"
+    shm_size: "1gb"
+    networks:
+      - cloudwerte-network
+
+  frontend:
+    image: asdwerte1/cloudwerte-frontend:latest
+    container_name: frontend
+    ports:
+      - "3080:80"
+    networks:
+      - cloudwerte-network
+    depends_on:
+      - backend
+
+  backend:
+    image: asdwerte1/cloudwerte-backend:latest
+    container_name: backend
+    ports:
+      - "5000:5000"
+    networks:
+      - cloudwerte-network
+
+networks:
+  cloudwerte-network:
+    driver: bridge
