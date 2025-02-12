@@ -1,0 +1,7 @@
+buildContainers.sh
+docker-compose.yml
+libre_share_fix.sh
+/data
+/config
+/webui/build
+/webui/node_modules
