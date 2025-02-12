@@ -11,9 +11,9 @@ const UNAME = process.env.LOGIN;
 const PWORD = process.env.PASSWORD;
 
 app.use(cors({
-    origin: "*",
+    origin: "http://localhost:3080",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "authorization"]
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
@@ -51,4 +51,4 @@ app.get("/api/containers", authenticateToken, (req, res) => {
     });
 });
 
-app.listen(PORT);
+app.listen(PORT, '0.0.0.0');

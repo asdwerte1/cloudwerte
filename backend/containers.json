@@ -2,26 +2,16 @@
     "Obsidian": {
         "description": "Note taking application.",
         "imagePath": "./images/2023_Obsidian_logo.svg.png",
-        "containerUrl": "/obsidian"
+        "containerUrl": "http://localhost:8080/"
     },
     "Libre Office": {
         "description": "Open source alternative to Mirosoft Office.",
         "imagePath": "./images/LibreOffice_Calc-Logo.wine.svg",
-        "containerUrl": "/libreoffice"
-    },
-    "EmulatorJS": {
-        "description": "Retro games emulator.",
-        "imagePath": "./images/emulatorjs-logo.png",
-        "containerUrl": "/emulatorjs"
-    },
-    "File Server": {
-        "description": "FTP file server.",
-        "imagePath": "./images/Alpine-logo.svg.png",
-        "containerUrl": "/alpine"
+        "containerUrl": "http://localhost:8081"
     },
     "Next Cloud": {
         "description": "Open source cloud storage",
         "imagePath": "./images/Nextcloud_Logo.svg.png",
-        "containerUrl": "/nextcloud"
+        "containerUrl": "https://localhost:8083"
     }
 }
