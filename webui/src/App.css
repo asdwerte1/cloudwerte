@@ -1,13 +1,32 @@
 body,
 html {
   font-family: "Courier New", Courier, monospace;
-  background-color: #ecf6f5;
+  background-color: #07404c;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-image: url("/public/images/bg.jpg");
+  background-size: 1920px auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
 footer {
-  padding: 0 10%
+  padding: 3% 0;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #ecf6f5;
+  font-size: 0.75rem;
+}
+
+form {
+  text-align: center;
+  align-items: center;
+}
+
+footer>p {
+  margin: 20px 10%;
 }
 
 h1 {
@@ -34,6 +53,7 @@ button {
   color: #ecf6f5;
   font-weight: bold;
   transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+  margin: 10px 15px;
 }
 
 button:hover {
@@ -46,15 +66,18 @@ button:hover {
 .container-icon {
   text-align: center;
   padding: 10px 20px;
-  border: solid 1px #07404c;
+  border: solid 1px rgba(234, 234, 234, 0.6);
   border-radius: 20px;
   margin: 10px 15px;
-  background-color: #eee;
+  background-color: rgba(234, 234, 234, 0.6);
 }
 
 .container-icon > img {
   margin-bottom: 15px;
   max-width: 100px;
+  background-color: rgba(51, 51, 51, 0.3);
+  border: solid thin transparent;
+  border-radius: 10px;
 }
 
 .container-icon > a > button {
@@ -75,6 +98,11 @@ button:hover {
 #icons {
   width: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 #content-wrapper {
@@ -92,6 +120,12 @@ button:hover {
   width: 50%;
 }
 
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 @media all and (max-width: 767px) {
   .login-container {
     width: 100%;
@@ -99,6 +133,21 @@ button:hover {
   input {
     width: 100%;
   }
+  #icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 80%;
 }
 
 input {

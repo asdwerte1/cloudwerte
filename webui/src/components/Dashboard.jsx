@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Icon({ title, description, image_route, url }) {
+const Icon = ({ title, description, image_route, url }) => {
     return (
         <div className='container-icon'>
             <h2>{title}</h2>
@@ -17,6 +17,7 @@ function Icon({ title, description, image_route, url }) {
 const Dashboard = () => {
     const [containers, setContainers] = useState({});
     const navigate = useNavigate();
+    const settings = () => navigate("/settings");
 
     useEffect(() => {
         const token = localStorage.getItem("token");
@@ -45,8 +46,9 @@ const Dashboard = () => {
                     <Icon key={name} title={name} description={info.description} image_route={info.imagePath} url={info.containerUrl} />
                 ))}
             </div>
-            <div className="align-center">
+            <div className="align-center nav">
                 <button onClick={handleLogout}>Logout</button>
+                <button onClick={settings}>Settings</button>
             </div>
         </div>
     );

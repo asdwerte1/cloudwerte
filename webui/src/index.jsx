@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import Settings from './components/Settings';
 import './App.css';
 
 const PrivateRoute = ({ children }) => {
@@ -20,6 +21,10 @@ root.render(
           <Dashboard />
         </PrivateRoute>
       } />
+      <Route path='/settings' element={
+        <PrivateRoute>
+          <Settings />
+        </PrivateRoute>} />
       <Route path='*' element={<Navigate to={"/dashboard"} />} />
     </Routes>
   </Router>

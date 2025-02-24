@@ -10,7 +10,6 @@ const Login = () => {
 
     const handleLogin = async (event) => {
         event.preventDefault();
-        console.log("Login attempt:", username, password);
 
         try {
             const response = await axios.post("http://localhost:5000/api/login", { username, password });

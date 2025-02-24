@@ -1,0 +1,38 @@
+.settings-container label {
+    padding: 10px 0;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #ecf6f5;
+    border: solid thin transparent;
+    border-radius: 20px;
+    width: 20%;
+}
+
+.settings-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.password-reset {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.settings-container input {
+    width: 50%;
+    margin: 0;
+}
+@media all and (max-width: 767px) {
+    .settings-container input {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .settings-container label {
+        width: 100%;
+    }
+}
